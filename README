@@ -3,3 +3,10 @@ Android. Part III (Part II. ListView, RecyclerView
 1. Создать список контактов. Каждый контакт содержит имя, email, адрес и телефон иконку (или
 фотку). Список содержит только иконку, имя и email контакта. При нажатии на контакт ­ он должен
 открываться в новом activity с подробной о нем информацией. Использовать ListView.
+
+//first activity
+Intent mIntent = new Intent(this, SecondActivity.class);
+mIntent.putExtra(key, value); //добавляем в intent значение и ключ к нему
+
+//second activity
+String value = getIntent().getExtras().getString(key); //получаем добавленное значение, указав ключ
